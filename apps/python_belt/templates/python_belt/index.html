@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Belt Exam</title>
+    {% load static %}
+    <meta name="description" content="Belt Exam for Python"> 
+    <link rel="stylesheet" href="{% static 'python_belt/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+    
+</head>
+<body>
+    <div id="wrapper">
+
+        <div id="messages">
+            {% if messages %}
+            <ul>
+                <li>Errors Discovered!</li>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        <h1>Welcome!</h1>
+        <form action="/register" method="POST">
+            {% csrf_token %}
+            <h2>REGISTER</h2>
+            <div class="register_row">
+                <label>Name</label>
+                <input type="text" name="name">
+            </div>
+            <div class="register_row">
+                <label>Alias</label>
+                <input type="text" name="alias">
+            </div>
+            <div class="register_row">
+                <label>Email</label>
+                <input type="text" name="email">
+            </div>
+            <div class="register_row">
+                <label>Password</label>
+                <input type="password" name="password">
+            </div>
+            <div class="register_row">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password">
+            </div>
+            <div class="register_row">s
+                <label>Date of Birth</label>
+                <input type="Date" name="bday">
+            </div>
+            <div class="register_row">
+                <input class="button" id="submitbutton" type="submit" value="Submit">
+            </div>
+        </form>
+
+        <form action="/login" method="POST" >
+            {% csrf_token %}
+            <h2>LOGIN</h2>
+            <div class="register_row">
+                <label>Email</label>
+                <input type="text" name="email">
+            </div>
+            <div class="register_row">
+                <label>Password</label>
+                <input type="password" name="password">
+            </div>
+            <div class="register_row">
+                <input class="button" id="submitbutton" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

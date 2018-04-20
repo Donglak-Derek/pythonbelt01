@@ -1,0 +1,36 @@
+body{
+	width: 800px;
+	background-color: #E3FFFF;
+}
+h1{
+	margin: 0 20px;
+}
+#warpper{
+	/*display: inline-block;*/
+	width: 700px;
+	margin: 10px auto:;
+}
+#messages{
+	/*border: 1px solid black;*/
+	height: 140px;
+	padding: 20px;
+	/*text-align: bottom;*/
+}
+
+.register_row{
+	width: 280px;
+	margin: 10px 0;
+	text-align: right;
+}
+form{
+	vertical-align: top;
+	display: inline-block;
+	width: 350px;
+	border: 1px solid black;
+	padding: 10px;
+	background-color: #FFE3FF;
+	margin: 10px;
+}
+div{
+	/*border: 1px solid black;*/
+}
